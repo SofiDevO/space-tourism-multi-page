@@ -1,5 +1,5 @@
-import React from 'react'
-import "./styles/main.scss"
+import React from 'react';
+import "./styles/main.scss";
 import '@fontsource/bellefair';
 import '@fontsource/barlow-condensed';
 import { Navigate } from 'react-router-dom';
@@ -12,31 +12,33 @@ import Hero from './pages/hero/Hero.jsx';
 import Destination from './pages/destination/Destination.jsx';
 import Satelites from './pages/satelites/Satelites.jsx';
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <Hero/>
+    element: <Hero />
   },
   {
     path: "/destination",
-    element:  <Destination/>,
-  },
-  {
-    path:"/destination/moon",
-    element:<Satelites/>
-  },
-  {
-    path:"/destination/:sateliteid",
-    element:<Satelites/>
+    element: <Destination />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="moon" replace />
+      },
+      {
+        path: ":sateliteId",
+        element: <Satelites />
+      }
+    ]
   },
   {
     path: "*",
-    element: <Navigate to="/"/>
+    element: <Navigate to="/" />
   }
 ]);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);

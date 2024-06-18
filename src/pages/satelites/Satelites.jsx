@@ -1,14 +1,10 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import data from '../../data/data.json';
+import { NavLink as Link }  from "react-router-dom";
 import NavSatelites from '../../components/NavSatelites.jsx/Navsatelites';
 const Satelites = ()=>{
-    const {sateliteid} = useParams();
-    const destination = data.destinations.find(dest => dest.name.toLowerCase() === sateliteid);
-
-    console.log(destination);
-    if(!destination){
-        return <Navigate to="/destination/moon"/>
-    }
+    const {sateliteId} = useParams();
+    const destination = data.destinations.find(dest => dest.name.toLowerCase() === sateliteId) || data.destinations[0];
     return (
         <>
             <div className="destination__satelite">
