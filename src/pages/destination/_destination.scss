@@ -1,0 +1,61 @@
+@use "../../styles/variables" as v;
+@import "../../styles/functions";
+
+.destination {
+  min-height: 100dvh;
+  background: linear-gradient(
+      180deg,
+      rgba(100, 99, 99, 0.203) 0%,
+      rgba(0, 0, 0, 0.715) 100%
+    ),
+    url(../../../public/img/destination/background-destination-desktop.jpg)
+      no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 4rem 0;
+}
+
+.destination__container {
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  @media screen and (max-width:768px) {
+    align-items: center;
+  }
+  h1 {
+    margin-bottom: 37px;
+    font-size: 1.75rem;
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    &::before {
+      margin-right: 24px;
+      content: "01";
+      color: v.$very-dark-navy;
+    }
+    @media screen and (max-width:768px) {
+      font-size: size(1.6);
+    }
+  }
+  .destination__menu {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    @media screen and (max-width:768px) {
+      align-items: center;
+      justify-content: center;
+    }
+    ul{
+      gap: size(2);
+      display: flex;
+      padding: 0;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        padding: 0;
+      }
+    }
+  }
+}

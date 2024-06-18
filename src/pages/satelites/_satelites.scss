@@ -1,0 +1,83 @@
+@use "../../styles/variables" as v;
+@import "../../styles/functions";
+.destination__satelite {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 9rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: size(3.2);
+  }
+  img {
+    min-width: 228.539px;
+    padding-top: 3rem;
+    width: 100%;
+    max-width: 28rem;
+    @media screen and (max-width: 768px) {
+      width: 200px;
+      padding-top: 0;
+    }
+  }
+  h2 {
+    font-size: size(9.6);
+    font-family: v.$font-bellafair;
+    font-weight: 400;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: size(5.6);
+    }
+  }
+  .info__container {
+    box-sizing: border-box;
+    margin: 0;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 327px;
+    p {
+      font-size: size(1.8);
+      line-height: 27px;
+      @media screen and (max-width: 768px) {
+        font-size: size(1.5);
+      }
+    }
+  }
+  .underline {
+    border-bottom: 1px solid white;
+  }
+  .destination__data {
+    display: flex;
+    gap: 5rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 1.4rem;
+      width: 100%;
+      align-items: center;
+
+      .data__container > * {
+        text-align: center;
+      }
+    }
+    .data__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      @media screen and (max-width:768px) {
+        align-items: center;
+      }
+      p {
+        font-size: size(1.4);
+      }
+      h3 {
+        font-size: size(2.8);
+      }
+      @media screen and (max-width: 768px) {
+        .data__container > * {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

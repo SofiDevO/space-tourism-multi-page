@@ -1,0 +1,18 @@
+$unit: 0.625rem;
+@function size($value){
+    @return $unit * $value ;
+}
+
+@mixin linkHover($colorBase, $colorHover){
+    color: $colorBase;
+      text-decoration: none;
+      font-family: "Barlow Condensed";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.7px;
+      @if($colorHover  == 'true'){
+          color: aqua;
+      }
+  }
