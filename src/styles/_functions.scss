@@ -16,3 +16,17 @@ $unit: 0.625rem;
           color: aqua;
       }
   }
+
+
+  @mixin custom-h1($before-content, $before-color) {
+    margin-bottom: 37px;
+    font-size: 1.75rem;
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+
+    &::before {
+      margin-right: 24px;
+      content: $before-content;
+      color: $before-color;
+    }
+  }

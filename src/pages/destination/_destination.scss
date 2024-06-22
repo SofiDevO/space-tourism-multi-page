@@ -26,19 +26,12 @@
     align-items: center;
   }
   h1 {
-    margin-bottom: 37px;
-    font-size: 1.75rem;
-    color: white;
-    font-family: "Barlow Condensed", sans-serif;
-    &::before {
-      margin-right: 24px;
-      content: "01";
-      color: v.$very-dark-navy;
-    }
+    @include custom-h1("01", v.$very-dark-navy);
     @media screen and (max-width:768px) {
       font-size: size(1.6);
     }
   }
+
   .destination__menu {
     display: flex;
     justify-content: flex-start;

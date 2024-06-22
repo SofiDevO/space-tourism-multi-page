@@ -11,6 +11,7 @@ import {
 import Hero from './pages/hero/Hero.jsx';
 import Destination from './pages/destination/Destination.jsx';
 import Satelites from './pages/satelites/Satelites.jsx';
+import Crew from './pages/Crew/Crew.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         element: <Satelites />
       }
     ]
+  },
+  {
+    path: "/crew",
+    element: <Crew/>
   },
   {
     path: "*",

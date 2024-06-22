@@ -1,0 +1,82 @@
+@use "../../styles/variables" as v;
+@import "../../styles/functions";
+.crew {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #0b0d17;
+  background-image: url("../../../public/img/bg/projects_fondo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .crew__contenido {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    max-width: 1272px;
+    h1 {
+      @include custom-h1("02", v.$very-dark-navy);
+    }
+  }
+  .crew__container {
+    min-height: 100dvh;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    .crew__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 539px;
+      gap: 2rem;
+      h3 {
+        font-weight: 500;
+        font-size: size(3.2);
+      }
+      h2 {
+        font-weight: 500;
+        font-size: size(5.6);
+      }
+      p {
+        font-size: size(1.8);
+        line-height: 32.4px;
+      }
+    }
+    .crew__img {
+      width: 539.349px;
+      height: 676px;
+      background-color: #00000000;
+      -webkit-mask-image: radial-gradient(circle at top, #000 66%, #0000 91%);
+      mask-image: radial-gradient(circle at top, #000 66%, #0000 91%);
+
+    }
+  }
+  /* Swiper styles */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .mySwiper {
+    width: 100vw;
+    display: flex;
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-right: 0;
+      gap: 31.86px;
+    }
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 4dvh;
+    gap: 40px;
+  .swiper-pagination-bullet{
+    background: #D0D6F9;
+    height: 15px;
+    width: 15px;
+  }
+}
