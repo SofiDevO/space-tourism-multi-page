@@ -12,7 +12,8 @@ import Hero from './pages/hero/Hero.jsx';
 import Destination from './pages/destination/Destination.jsx';
 import Satelites from './pages/satelites/Satelites.jsx';
 import Crew from './pages/Crew/Crew.jsx';
-
+import Thecnologies from './pages/thecnologies/Thecnologies.jsx';
+import Thecnology from './pages/thecnology/Thecnology.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,20 @@ const router = createBrowserRouter([
       {
         path: ":sateliteId",
         element: <Satelites />
+      }
+    ]
+  },
+  {
+    path: "/technologies",
+    element: <Thecnologies/>,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="launch-vehicle" replace />
+      },
+      {
+        path: ":technologyId",
+        element: <Thecnology />
       }
     ]
   },

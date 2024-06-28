@@ -5,10 +5,10 @@
 @use "../styles/functions";
 @use "../styles/variables" as v;
 @use "../pages/Crew/crew";
+@use "../pages/thecnologies/thecnologies";
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {

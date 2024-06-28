@@ -5,7 +5,7 @@ const menuData = [
   {text:"00 HOME", menuLink: "/"  },
   {text:"01 DESTINATION", menuLink: "/destination"  },
   {text:"02 CREW", menuLink: "/crew"  },
-  {text:"03 TECHNOLOGY", menuLink: "/technology"  }
+  {text:"03 TECHNOLOGY", menuLink: "/technologies"  }
 ]
 
 

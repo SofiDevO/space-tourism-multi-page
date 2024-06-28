@@ -18,15 +18,20 @@ $unit: 0.625rem;
   }
 
 
-  @mixin custom-h1($before-content, $before-color) {
-    margin-bottom: 37px;
-    font-size: 1.75rem;
+  @mixin custom-h1($before-content, $before-color, $m-bottom: 37px, $text-size:1.75rem,$before-margin:24px ) {
+    margin-bottom:$m-bottom;
+    font-size:$text-size ;
     color: white;
     font-family: "Barlow Condensed", sans-serif;
 
     &::before {
-      margin-right: 24px;
+      margin-right: $before-margin;
       content: $before-content;
       color: $before-color;
     }
+  }
+  @mixin text-format($font-weigth, $font-size,$margin-bottom ){
+    font-weight: $font-weigth;
+    font-size: $font-size ;
+    margin-bottom: $margin-bottom;
   }
