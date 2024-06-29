@@ -36,6 +36,7 @@
       h1 {
         font-size: size(15);
         @media screen and (max-width: 768px) {
+          color: red;
           font-size: size(8.8);
         }
       }
