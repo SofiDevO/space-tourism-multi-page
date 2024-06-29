@@ -2,11 +2,11 @@
 @import "../../styles/functions.scss";
 
 .hero {
-  background: url("../../../public/img/bg/espacio_planeta.webp");
+  background: url("../../img/bg/espacio_planeta.webp");
   background-size: cover;
   min-height: 100dvh;
   @media screen and (max-width: 768px) {
-    background: url("../../../public/img/bg/MobilPlanetapng.png");
+    background: url("../../img/bg/bg/MobilPlanetapng.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
