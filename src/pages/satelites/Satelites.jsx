@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import data from '../../data/data.json';
-import { NavLink as Link }  from "react-router-dom";
 import NavSatelites from '../../components/NavSatelites.jsx/Navsatelites';
 const Satelites = ()=>{
     const {sateliteId} = useParams();

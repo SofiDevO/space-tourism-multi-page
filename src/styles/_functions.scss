@@ -23,7 +23,6 @@ $unit: 0.625rem;
     font-size:$text-size ;
     color: white;
     font-family: "Barlow Condensed", sans-serif;
-
     &::before {
       margin-right: $before-margin;
       content: $before-content;
